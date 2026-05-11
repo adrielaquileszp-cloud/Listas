@@ -1,0 +1,54 @@
+# ═══════════════════════════════════════════════════════════════
+# BIO ZEN — Configuración de Envío Automático de Listas
+# ═══════════════════════════════════════════════════════════════
+# Copia como .env y llena con tus datos reales.
+
+# ── ODOO ──
+ODOO_URL=https://tu-instancia.odoo.com
+ODOO_DB=tu_base_de_datos
+ODOO_USER=admin@tuempresa.com
+ODOO_PASSWORD=tu_api_key
+# ── TARIFA POR DEFECTO ──
+# Esta tarifa se usa SOLO para --send-to (envío individual) o si un
+# contacto no tiene tarifa asignada en Odoo.
+# Para el envío masivo (--send), cada contacto usa su propia tarifa
+# asignada en Odoo (campo "Lista de precios" del contacto).
+ODOO_PRICELIST_ID=2
+
+# ── GMAIL ──
+# Para SMTP_PASSWORD necesitas un "App Password" de Google:
+#   1. Ve a myaccount.google.com/security
+#   2. Activa verificación en 2 pasos
+#   3. Busca "Contraseñas de aplicaciones"
+#   4. Crea una para "Correo" → "Otro" → "Bio Zen"
+#   5. Copia la contraseña de 16 caracteres aquí
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=tu-email@gmail.com
+SMTP_PASSWORD=xxxx xxxx xxxx xxxx
+EMAIL_FROM_NAME=Bio Zen
+
+# ── FILTRO DE CONTACTOS MAYORISTAS ──
+# Opción 1: Por etiqueta/tag del contacto (RECOMENDADO)
+#   Ve a cada contacto mayorista en Odoo y agrega la etiqueta "Mayorista"
+MAYORISTA_TAG_NAME=Mayorista
+
+# Opción 2: Por categoría comercial (deja TAG vacío si usas esta)
+# MAYORISTA_CATEGORY=Mayorista
+
+# Opción 3: Por campo personalizado booleano
+# MAYORISTA_FIELD=x_es_mayorista
+
+# ── LISTAS A ENVIAR ──
+# Separadas por coma. Opciones: Naturista,Planta,Veladora,Bultos,Esoterico
+LISTAS_ENVIAR=Naturista,Planta,Veladora,Bultos,Esoterico
+
+# ── PROGRAMACIÓN ──
+# Día: monday, tuesday, wednesday, thursday, friday, saturday, sunday
+# Hora: formato 24h HH:MM
+SCHEDULE_DAY=monday
+SCHEDULE_TIME=06:00
+
+# ── RUTAS ──
+OUTPUT_DIR=./listas_de_precios
+LOGO_PATH=./Logo_Bio_Zen_Solo.png
