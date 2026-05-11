@@ -4,10 +4,10 @@
 # Copia como .env y llena con tus datos reales.
 
 # ── ODOO ──
-ODOO_URL=https://tu-instancia.odoo.com
-ODOO_DB=tu_base_de_datos
-ODOO_USER=admin@tuempresa.com
-ODOO_PASSWORD=tu_api_key
+ODOO_URL=https://grupo-biozen130426.odoo.com
+ODOO_DB=grupo-biozen130426
+ODOO_USER=procesos@grupobiozen.com
+ODOO_PASSWORD=73670480d505734b15b41a73e326221071fd8074
 # ── TARIFA POR DEFECTO ──
 # Esta tarifa se usa SOLO para --send-to (envío individual) o si un
 # contacto no tiene tarifa asignada en Odoo.
