@@ -72,10 +72,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Odoo
-ODOO_URL = os.getenv('ODOO_URL', 'https://tu-instancia.odoo.com')
-ODOO_DB = os.getenv('ODOO_DB', 'tu_base_de_datos')
-ODOO_USER = os.getenv('ODOO_USER', 'admin')
-ODOO_PASSWORD = os.getenv('ODOO_PASSWORD', 'tu_contraseña')
+ODOO_URL = os.getenv('ODOO_URL', 'https://grupo-biozen130426.odoo.com')
+ODOO_DB = os.getenv('ODOO_DB', 'grupo-biozen130426')
+ODOO_USER = os.getenv('ODOO_USER', 'procesos@grupobiozen.com')
+ODOO_PASSWORD = os.getenv('ODOO_PASSWORD', '73670480d505734b15b41a73e326221071fd8074')
 ODOO_PRICELIST_ID = int(os.getenv('ODOO_PRICELIST_ID', '2'))
 
 # Email
